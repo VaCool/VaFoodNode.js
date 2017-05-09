@@ -6,19 +6,13 @@ var multer = require("multer");
 var fs = require("fs");
 var namefile;
 
-
-
-
-
 var storageOfPizza = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, './public/img/Pizza/')
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
-        console.log("hi");
         namefile = "img/pizza/" + file.originalname;
-        console.log(file.originalname);
     }
 });
 
@@ -28,9 +22,7 @@ var storageOfPaste = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
-        console.log("hi");
         namefile = "img/paste/" + file.originalname;
-        console.log(file.originalname);
     }
 });
 
@@ -40,9 +32,7 @@ var storageOfRisotto = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
-        console.log("hi");
         namefile = "img/risotto/" + file.originalname;
-        console.log(file.originalname);
     }
 });
 
@@ -52,18 +42,14 @@ var storageOfDessert = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
-        console.log("hi");
         namefile = "img/dessert/" + file.originalname;
-        console.log(file.originalname);
     }
 });
-
 
 var uploadPizza = multer({ storage: storageOfPizza });
 var uploadPaste = multer({ storage: storageOfPaste });
 var uploadRisotto = multer({ storage: storageOfRisotto });
 var uploadDessert = multer({ storage: storageOfDessert });
-
 var path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -86,11 +72,11 @@ var connection = mysql.createConnection({
 
 /// пицца
 app.get('/pizza', function (req, res, next) {
-connection.query('SELECT *  FROM pizza;', 
-function (error, results, fields) {
-  	if (error) throw error;
-  	res.send(results);
-});
+  connection.query('SELECT *  FROM pizza;', 
+  function (error, results, fields) {
+     if (error) throw error;
+	   res.send(results);
+  });
 });
 
 
@@ -100,12 +86,11 @@ app.post('/delpizza', function (req, res) {
 	fs.unlink(req.body.URL, function (err) {
     if (err) throw err;
     console.log("file deleted");
-});
-connection.query("DELETE FROM `pizza` WHERE `pizza_id`=" + req.body.pizza_id + ";", 
-function (error, results, fields) {
+  });
+  connection.query("DELETE FROM `pizza` WHERE `pizza_id`=" + req.body.pizza_id + ";", 
+  function (error, results, fields) {
   	if (error) throw error;
-
-});
+  });
 });
 
 app.post('/uploadPizza', uploadPizza.single('fileupload-input'), function(req, res, next) {
@@ -113,34 +98,31 @@ app.post('/uploadPizza', uploadPizza.single('fileupload-input'), function(req, r
 	if(req.body.first == "on"){
 		categories = categories + " " + "first";
 	}
-    if (req.body.second == "on"){
-        categories = categories + " " + "second";
-    }
-     if (req.body.popular == "on"){
-        categories = categories + " " + "popular";
-    }   
-    if (req.body.new == "on"){
-        categories = categories + " " + "new";
-    }
+  if (req.body.second == "on"){
+    categories = categories + " " + "second";
+  }
+  if (req.body.popular == "on"){
+    categories = categories + " " + "popular";
+  }   
+  if (req.body.new == "on"){
+    categories = categories + " " + "new";
+  }
 	connection.query("INSERT INTO pizza VALUES(NULL, '" + req.body.name + "', '" + req.body.weight + "', '" + 
-	req.body.price + "', '" + namefile + "', '" + req.body.consist + "', '" + categories + "');", 
-function (error, results, fields) {
+	                 req.body.price + "', '" + namefile + "', '" + req.body.consist + "', '" + categories + "');", 
+  function (error, results, fields) {
   	if (error) throw error;
-});
-
-   res.send('ok')
+  });
+  res.send('ok')
 });
 
 app.post('/pizzaChange', function (req, res) {
-connection.query("UPDATE pizza  SET  name = '" + req.body.name + "', weight = '" + req.body.weight + "', price = '" + 
-  req.body.price + "', consist = '" + req.body.consist +"', categories = '" + req.body.categories + 
-  "' WHERE pizza_id = " + req.body.pizza_id +";", 
-function (error, results, fields) {
+  connection.query("UPDATE pizza  SET  name = '" + req.body.name + "', weight = '" + req.body.weight + "', price = '" + 
+                   req.body.price + "', consist = '" + req.body.consist +"', categories = '" + req.body.categories + 
+                   "' WHERE pizza_id = " + req.body.pizza_id +";", 
+  function (error, results, fields) {
     if (error) throw error;
-});
-
+  });
    res.send('ok')
-
 });
 
 /// конец пиццы
@@ -153,26 +135,23 @@ function (error, results, fields) {
 
 // паста
 app.get('/paste', function (req, res, next) {
-connection.query('SELECT *  FROM paste;', 
-function (error, results, fields) {
+  connection.query('SELECT *  FROM paste;', 
+  function (error, results, fields) {
     if (error) throw error;
     res.send(results);
-});
+  });
 });
 
 
 app.post('/delpaste', function (req, res) {
   fs.unlink(req.body.URL, function (err) {
-    if (err) throw err;
+  if (err) throw err;
     console.log("file deleted");
-});
-  console.log(req.body.paste_id);
-
-connection.query("DELETE FROM `paste` WHERE `paste_id`=" + req.body.paste_id + ";", 
-function (error, results, fields) {
+  });
+  connection.query("DELETE FROM `paste` WHERE `paste_id`=" + req.body.paste_id + ";", 
+  function (error, results, fields) {
     if (error) throw error;
-
-});
+  });
 });
 
 app.post('/uploadpaste', uploadPaste.single('fileupload-input'), function(req, res, next) {
@@ -180,34 +159,31 @@ app.post('/uploadpaste', uploadPaste.single('fileupload-input'), function(req, r
   if(req.body.first == "on"){
     categories = categories + " " + "first";
   }
-    if (req.body.second == "on"){
-        categories = categories + " " + "second";
-    }
-     if (req.body.popular == "on"){
-        categories = categories + " " + "popular";
-    }   
-    if (req.body.new == "on"){
-        categories = categories + " " + "new";
-    }
+  if (req.body.second == "on"){
+    categories = categories + " " + "second";
+  }
+  if (req.body.popular == "on"){
+    categories = categories + " " + "popular";
+  }   
+  if (req.body.new == "on"){
+    categories = categories + " " + "new";
+  }
   connection.query("INSERT INTO paste VALUES(NULL, '" + req.body.name + "', '" + req.body.weight + "', '" + 
-  req.body.price + "', '" + namefile + "', '" + req.body.consist + "', '" + categories + "');", 
-function (error, results, fields) {
+                  req.body.price + "', '" + namefile + "', '" + req.body.consist + "', '" + categories + "');", 
+  function (error, results, fields) {
     if (error) throw error;
-});
-
+  });
    res.send('ok')
 });
 
 app.post('/pasteChange', function (req, res) {
-connection.query("UPDATE paste  SET  name = '" + req.body.name + "', weight = '" + req.body.weight + "', price = '" + 
-  req.body.price + "', consist = '" + req.body.consist +"', categories = '" + req.body.categories + 
-  "' WHERE paste_id = " + req.body.paste_id +";", 
-function (error, results, fields) {
+  connection.query("UPDATE paste  SET  name = '" + req.body.name + "', weight = '" + req.body.weight + "', price = '" + 
+                  req.body.price + "', consist = '" + req.body.consist +"', categories = '" + req.body.categories + 
+                  "' WHERE paste_id = " + req.body.paste_id +";", 
+  function (error, results, fields) {
     if (error) throw error;
-});
-
+  });
    res.send('ok')
-
 });
 
 // конец пасты

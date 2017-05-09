@@ -1,7 +1,7 @@
 var massIdButtons = ['li1','li2', 'li3','li4', 'li5', 'li6', 'li7'];
 var computedStyle = getComputedStyle(document.body); // не понимаю почему работает
 document.getElementById('li1').style.backgroundColor = "#ffe714";
-$('#workspace').load('./home.html');
+$('#workspace').load('./news.html');
 
 $(document).ready(function() {
 
@@ -211,7 +211,7 @@ $(document).ready(function() {
 	document.getElementById(id).style.backgroundColor = "#ffe714";
 	switch(id) {
 		case 'li1':  
-			$('#workspace').load('./home.html');
+			$('#workspace').load('./news.html');
     		break;
 		case 'li2':  
 			$('#workspace').load('./pizza.html');
