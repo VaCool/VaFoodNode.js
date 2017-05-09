@@ -1,0 +1,337 @@
+
+@font-face {
+  font-family: 'Vanessa';
+  src: url('../fonts/Vanessa.eot?#iefix') format('embedded-opentype'),  url('../fonts/Vanessa.woff') format('woff'), 
+  url('../fonts/Vanessa.ttf')  format('truetype'), url('../fonts/Vanessa.svg#Vanessa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+button{
+	background: red;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 6px;
+	border: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 18px;	
+}
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+* html .page-wrapper {
+    height: 100%;
+}
+.page-buffer {
+    height: 50px;
+
+}
+.page-footer {
+    background: #555f55;
+}
+
+
+h1, p{margin: 5px;}
+button{text-align: left;}
+body{ background: rgba(33, 255, 30, 0.15);}
+.scrollup{
+width:40px;
+height:40px;
+opacity:0.3;
+position:fixed;
+bottom:50px;
+right:100px;
+display:none;
+text-indent:-9999px;
+background: url('../img/up.png') no-repeat;
+}
+
+.navbar {
+
+ width: 875px;
+ height: 50px;
+ background: #3a3a3a;
+ /* Старые браузеры */
+ 
+background: -moz-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2b2b2b 51%, #2b2b2b 100%);
+ /* FF3.6+ */
+ 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3a3a3a), color-stop(50%, #3a3a3a), color-stop(51%, #2b2b2b), color-stop(100%, #2b2b2b));
+ /* Chrome,Safari4+ */
+ 
+background: -webkit-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2b2b2b 51%, #2b2b2b 100%);
+ /* Chrome10+,Safari5.1+ */
+ 
+background: -o-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2b2b2b 51%, #2b2b2b 100%);
+ /* Opera 11.10+ */
+ 
+background: -ms-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2b2b2b 51%, #2b2b2b 100%);
+ /* IE10+ */
+ 
+background: linear-gradient(to bottom, #3a3a3a 0%, #3a3a3a 50%, #2b2b2b 51%, #2b2b2b 100%);
+ /* W3C */
+ 
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3a3a3a', endColorstr='#2b2b2b', GradientType=0);
+ /* IE6-9 */
+ 
+margin: 0px auto 10px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+ -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+ -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+ border-top: 1px solid #363636;
+ border-left: 1px solid #363636;
+ border-bottom: 1px solid #000000;
+ border-right: 1px solid #000000;
+}
+ ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+}
+.navbar ul li {
+ display: inline;
+ float: left;
+ width: 125px;
+ height: 50px;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ color: #999999;
+ line-height: 50px;
+ border-right: 1px solid #363636;
+ border-left: 1px solid #000000;
+ overflow: hidden;
+ margin: 0;
+ padding: 0;
+}
+.navbar ul li a {
+ width: 125px;
+ height: 100px;
+ display: inline-block;
+}
+.navbar ul li:first-child {
+ border-left: none;
+ -webkit-border-radius: 4px 0 0 4px;
+ -moz-border-radius: 4px 0 0 4px;
+ border-radius: 4px 0 0 4px;
+}
+.navbar ul li:last-child {
+ border-right: none;
+ -webkit-border-radius: 0 4px 4px 0;
+ -moz-border-radius: 0 4px 4px 0;
+ border-radius: 0 4px 4px 0;
+}
+.navbar .hover {
+ background: green;
+ color: #15d615;
+ 
+}
+a {
+ color: #999999;
+ text-decoration: none;
+}
+a:hover {
+ color: #999999;
+}
+
+body {
+	margin: 0;
+}
+
+.top {
+	min-width: 1300px;
+	position:fixed;
+	top:0;
+	width: 100%;
+	
+	background: orange;
+	z-index: 999999;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.top .row {
+	width: 100%
+}
+
+.phones .phonerow .mobileOperator {
+	display: inline-block;
+		font-weight: bold;
+}
+
+
+.phones .phonerow .phone {
+	display: inline-block;
+	font-size: 60px;
+	vertical-align: top;
+}
+.phones .row .phone p {
+	margin: 0;
+}
+
+
+
+.top .row .phones {
+	display: inline-block;
+	width: calc(40% - 15px);
+	width: -moz-calc(30% - 15px);
+	text-align: center;
+	color: black;
+
+}
+
+.top .row .logo {
+	font-family: 'Vanessa';
+	font-weight: 500;
+	color: #d20073;
+	font-size: 400%;
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+.top .row .enter {
+	vertical-align: top;
+	font-size: 200%;
+	padding-right: 15px;
+	display: inline-block;
+	width: calc(30% - 23px);
+	width: -moz-calc(30% - 23px);
+	text-align: left;
+}
+.empty{
+	height: 180px;
+}
+.main{
+
+}
+
+
+#loginModal p{
+	padding-bottom: 15px;
+}
+
+#loginModal {
+	background: #826464;
+	font-size: 18px;
+	padding: 0;
+	text-align: left;
+	color: black;
+	width: 400px; 
+	height: 350px;
+	border: 3px #000 solid;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: -5%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 43%; /* пoлoвинa экрaнa слевa */
+	margin-top: -180px;
+	margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	float: left;
+}
+
+
+#loginModal button{
+	background: blue;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 6px;
+	border: 0;
+
+	
+}
+
+#loginModal .navbarRegistration {
+	width: 100%;
+	text-align: center;
+}
+
+#loginModal #forLogin{
+	padding-top: 15px;
+	text-align: center;
+}
+
+#loginModal #forsignUp{
+	padding-top: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: center;
+}
+
+
+
+/* Пoдлoжкa */
+.overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.8; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=80);
+	width:100%; 
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
+}
+.modal_div .modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+.navbarRegistration ul{
+	width: 400px;
+	background: #4c2c2c;
+	height: 50px;
+}
+.navbarRegistration ul li{
+	display: inline;
+ 	float: left;
+	padding-top: 10px;
+	height: 40px;
+	width: 200px;
+	display: inline-block;	
+	font-size: 26px;
+}
+
+.navbarRegistration #forsignUp{
+	float: left;
+	padding-left: 45px;
+	
+
+}
+ #forsignUp input{
+	float: right;
+}
+
+ #forsignUp p{
+	text-align: left;
+}
+
+
+
+
+.footer{
+	    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}

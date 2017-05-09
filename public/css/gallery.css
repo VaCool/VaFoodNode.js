@@ -1,0 +1,151 @@
+
+button{background: red;}
+.menu{overflow:hidden;margin-right: 10%; margin-left: 10%;text-align: center; min-width: 1200px;font: 12px/1.5em Arial, Helvetica, sans-serif, "Arial Narrow";color:#a5a5a5;}
+.menu img{border: 1px solid #d5d5d5; border-radius: 4px 4px 4px 4px;background:#FFFFFF;padding:10px;}
+.menu img:hover{border: 1px solid #A9CF54;box-shadow:0 0 5px #A9CF54;}
+
+.menu ul{text-align: center;}
+.menu li{float: left;margin: 0 12px 20px 0;overflow: hidden;width: 245px;padding:5px; color: green; text-align: center;}
+#category {margin-right: 7%; margin-left: 7%; color: red;}
+#category h1{color: green; font-size: 350%;margin-left: 0;}
+#category a { padding: 2px 6px; border: 1px solid #A74C10; }
+#category a:hover, #category a.current { background: #A74C10; color: white; }
+
+.firstName{
+	height: 40px;
+}
+
+
+.menu .modal_div .fp_next{
+
+
+    width:50%;
+    height:40%;
+    position:fixed;
+    top: 40%;
+    bottom:40%;
+    right: 0%;
+    margin-top:-25px;
+    cursor:pointer;
+    opacity:0.7;
+    z-index:1000;
+
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.menu .modal_div .fp_next img{
+float: right;
+margin-top: 17%;
+}
+.menu .modal_div .fp_prev{
+
+    width:50%;
+    height:40%;
+    position:fixed;
+    top: 40%;
+    bottom:40%;
+    left: 0%;
+    margin-top:-25px;
+    cursor:pointer;
+    opacity:0.7;
+    z-index:1000;
+  
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.menu .modal_div .fp_prev img{
+float: left;
+margin-top: 17%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .modal_div {
+ 	
+	width: 600px; 
+	height: 480px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	left: 38%; /* пoлoвинa экрaнa слевa */
+	margin-top: -195px;
+	margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+	font-size: 16px;
+}
+.modal_div p{
+	padding: 10px 0px;
+}
+
+.modal_div button{
+	margin: 0;
+}
+#add, #change{
+	background: #826464;
+	font-size: 18px;
+	padding-top: 50px;
+	padding-left: 30px;
+	text-align: left;
+	color: black;
+	width: 400px; 
+	height: 330px;
+}
+
+#add p{
+	padding-bottom: 15px;
+}
+#add, span, textarea{
+	vertical-align: top;
+}
+
+#add button{
+	background: blue;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 6px;
+	border: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;	
+}
+
+#change p{
+	padding-bottom: 15px;
+}
+#change span, textarea{
+	vertical-align: top;
+}
+
+#change button{
+	background: blue;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 6px;
+	border: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;	
+}
+
+
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */

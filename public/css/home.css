@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Vanessa';
+  src: url('./fonts/Vanessa.eot?#iefix') format('embedded-opentype'),  url('./fonts/Vanessa.woff') format('woff'), 
+  url('./fonts/Vanessa.ttf')  format('truetype'), url('./fonts/Vanessa.svg#Vanessa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main {
+	text-align: center;
+	color: DarkOrchid;
+}
+.main p {
+	font-size: 200%;
+	margin: 5px;
+}
+.main span {
+	font-family: 'Vanessa';
+	font-size: 700%;
+	margin: 5px;
+	color: blue;
+}
+.main .row .mobileOperator {
+	display: inline-block;
+	color: green;
+}
+
+.main .row .mobileOperator p {
+	margin: 5px;
+}
+
+.main .row .mobileOperator #green {
+	color: green;
+}
+
+.main .row .mobileOperator #red {
+	color: red;
+}
+
+.main .row .mobileOperator #orange {
+	color: orange;
+}
+.main .row .phone {
+	display: inline-block;
+	font-size: 400%;
+	vertical-align: top;
+}
+.main .row .phone p {
+	margin: 0;
+}

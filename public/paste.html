@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+ <meta charset="utf-8">
+<link type="text/css" href="./css/gallery.css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="./js/paste.js"></script>
+<script type="text/javascript" src="./js/filter.js"></script>
+<script type="text/javascript" src="./js/modal.js"></script>
+<script type="text/javascript" src="./js/verification.js"></script>
+
+<body>
+
+
+<div id="category">
+      <h1>Паста</h1>
+ </div>
+
+
+
+
+<div class="menu">
+<ul id="menu">
+
+</ul>
+ 
+<div style="display:none" id="template">
+<div class="elements" >
+
+<li class="#" data-class>
+	<a href="#" data-id class="open_modal"><img width="200" height="200" src="#" data-url-small title="подробнее" /> </a>
+		<h1 data-name-first class="firstName"></h1>
+	<p>вес: <span data-weight></span> гр. цена <span data-price></span> грн.</p>
+	<button class="buy"><p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Хочу!</p></button>
+	<p><button class="change" style="display:none">Изменить</button>
+	<button class="add" style="display:none">Добавить</button>
+	<button class="del" style="display:none">Удалить</button></p>
+	<div id="#" data-link class="modal_div"> <!-- скрытый див с уникaльным id = modal1 -->
+	<span class="modal_close">X</span>
+       <img width="350" height="350" src="#" data-url-big title="подробнее" />
+       <div class="fp_next"> <img  src="img/next.png" title="вперед" /></div>
+       <div class="fp_prev"> <img  src="img/prev.png"  title="назад" /></div>
+       <h1 data-name-second></h1>
+       <p data-consist></p>
+       <button class="buy"><p><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>Хочу!</p></button>
+</div>
+	</li>
+</div>
+</div>
+<div id="add" class="modal_div">
+	<span class="modal_close">X</span>
+		<form enctype='multipart/form-data' action="/upload" method="POST" id="uploadForm">
+	<p>Название: <input type="text" name="name" size="35"> </p>
+	<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspВес: <input type="text" name="weight" size="5"> 
+	Цена: <input type="text" name="price" size="5"> </p>
+	<p>Картинка: 
+        <input type="file" name="fileupload-input" /> <br/>
+   </p>
+	<p>Мясные: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="first">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	Вегетерианские:  &nbsp &nbsp<input type="checkbox" name="second"> </p>
+	<p>Популярные: &nbsp<input type="checkbox" name="popular">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+	Новинки:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="new"> </p>
+	<span>&nbspСостав: </span><textarea type="text" name="consist" cols="40" rows="5"> </textarea> 
+	 </form> 
+	<center><button class="download">Загрузить</button></center>
+</div>
+
+
+<div id="change" class="modal_div">
+	<span class="modal_close">X</span>
+	<p>Название: <input type="text" name="name" size="35"> </p>
+	<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspВес: <input type="text" name="weight" size="5"> 
+	Цена: <input type="text" name="price" size="5"> </p>
+	<p>Мясные: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="first">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	Вегетерианские:  &nbsp &nbsp<input type="checkbox" name="second"> </p>
+	<p>Популярные: &nbsp<input type="checkbox" name="popular">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+	Новинки:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="new"> </p>
+	<span>&nbspСостав: </span><textarea type="text" name="consist" cols="40" rows="5"> </textarea> 
+	<center><button class="saveChange">Сохранить</button></center>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
